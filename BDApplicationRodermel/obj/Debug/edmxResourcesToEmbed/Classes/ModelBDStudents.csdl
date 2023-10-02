@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lesuser25Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ученики">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Фамилия" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="Предмет" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Школа" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="Баллы" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="lesuser25Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ученики" EntityType="Self.Ученики" />
+  </EntityContainer>
+</Schema>
